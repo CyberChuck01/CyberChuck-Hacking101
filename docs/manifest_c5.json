@@ -1,0 +1,13 @@
+{
+  "name": "CyberChuck Hacking 101 (T-Dongle-C5)",
+  "version": "0.1",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C5",
+      "parts": [
+        { "path": "firmware_c5.bin", "offset": 0 }
+      ]
+    }
+  ]
+}

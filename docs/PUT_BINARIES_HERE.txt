@@ -1,0 +1,4 @@
+Add your compiled installer binaries here:
+  firmware_s3.bin   (T-Dongle-S3)
+  firmware_c5.bin   (T-Dongle-C5)
+See BUILD_AND_ADD_BINARIES.md. You can delete this file once the .bin files are added.
