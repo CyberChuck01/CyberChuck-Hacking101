@@ -1,0 +1,4 @@
+# Arduino build output
+build/
+*.tmp
+# Keep the installer binaries in docs/ (do NOT ignore docs/*.bin)

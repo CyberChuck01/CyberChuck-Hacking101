@@ -63,9 +63,11 @@ ST7735 and ST7789 Library** + **Adafruit GFX Library**. See
 
 ## Roadmap
 
+- **v0.4** — Lesson 4: network enumeration (scan the subnet, find the weak host).
+- **v0.3** — Lesson 3: traffic sniffing (read a capture, pull creds from plaintext + base64).
 - **v0.2** — Lesson 2: login brute force (default creds, username enumeration, lockout).
 - **v0.1** — Lesson 1: password guessing from recon, 4 difficulties + custom mode.
-- Next — Lesson 3: traffic sniffing (Wireshark basics).
+- All four core lessons shipped. More can be added on request.
 - Later — traffic sniffing (Wireshark) and enumeration (Nmap) lessons.
 
 ## License
