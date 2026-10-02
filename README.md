@@ -63,6 +63,8 @@ ST7735 and ST7789 Library** + **Adafruit GFX Library**. See
 
 ## Roadmap
 
+- **v0.6** — Time Attack: the Final Mission is now a speedrun with a live timer and a saved best time (beat your record).
+- **v0.5** — Final Mission: end-to-end full chain on one linked target (scan → port-scan → sniff → log in).
 - **v0.4** — Lesson 4: network enumeration (scan the subnet, find the weak host).
 - **v0.3** — Lesson 3: traffic sniffing (read a capture, pull creds from plaintext + base64).
 - **v0.2** — Lesson 2: login brute force (default creds, username enumeration, lockout).
