@@ -75,8 +75,22 @@
     <div class="req">Chrome / Edge on desktop · USB cable · no software to install</div>
   </div>
 
+  <div class="card">
+    <h2>Seeed XIAO ESP32-C5 <span class="beta">no display</span></h2>
+    <p>The bare ESP32-C5 board — no screen, for people without a T-Dongle. Same lessons,
+       tiers, mission and voice; the only thing missing is the on-device logo/status screen.
+       (Same ESP32-C5 silicon as the C5 dongle — if the button errors on chip detection,
+       update your Chrome/Edge and retry.)</p>
+    <esp-web-install-button manifest="./manifest_xiao_c5.json">
+      <button slot="activate" class="btn">&#9889; Flash XIAO ESP32-C5</button>
+      <span slot="unsupported">Your browser can't flash hardware — use <b>Chrome</b> or <b>Edge</b> on a computer.</span>
+      <span slot="not-allowed">This page must be opened over HTTPS.</span>
+    </esp-web-install-button>
+    <div class="req">Chrome / Edge on desktop · USB cable · no software to install</div>
+  </div>
+
   <div class="note">
-    <b style="color:var(--cyan)">If the port doesn't show up:</b> hold the dongle's BOOT button
+    <b style="color:var(--cyan)">If the port doesn't show up:</b> hold the board's BOOT button
     while plugging it in, then click flash. After flashing, unplug and replug without holding BOOT.
   </div>
 
