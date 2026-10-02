@@ -45,11 +45,14 @@ Firmware lives in [`firmware/`](firmware/) — **one ready-to-flash sketch per b
 
 - `firmware/CyberChuck_Sandbox_S3/` — flash for the **T-Dongle-S3**
 - `firmware/CyberChuck_Sandbox_C5/` — flash for the **T-Dongle-C5**
-- `firmware/CyberChuck_Sandbox/` — dev source (split files + `BOARD_S3`/`BOARD_C5` toggle)
+- `firmware/CyberChuck_Sandbox_XIAO_C5/` — flash for the **Seeed XIAO ESP32-C5** (bare board, **no display**)
+- `firmware/CyberChuck_Sandbox/` — dev source (split files + `BOARD_S3`/`BOARD_C5`/`BOARD_XIAO_C5` toggle)
 
-Each labeled sketch already has the correct board selected. Libraries: **Adafruit
-ST7735 and ST7789 Library** + **Adafruit GFX Library**. See
-[`firmware/README.md`](firmware/README.md) and `docs/BUILD_AND_ADD_BINARIES.md`.
+Each labeled sketch already has the correct board selected. The two **dongle** builds
+need **Adafruit ST7735 and ST7789 Library** + **Adafruit GFX Library**; the **XIAO
+ESP32-C5** build has no screen and needs **no libraries** (board `XIAO_ESP32C5`, USB
+CDC On Boot = Enable). See [`firmware/README.md`](firmware/README.md) and
+`docs/BUILD_AND_ADD_BINARIES.md`.
 
 ## Hardware notes
 
@@ -58,8 +61,14 @@ ST7735 and ST7789 Library** + **Adafruit GFX Library**. See
 - **S3 vs C5:** different pins, different LED method (S3 LED is its own bus; C5
   shares the display bus), different SD (S3 = SDMMC, C5 = SPI). All handled by the
   board toggle.
+- **Bare XIAO ESP32-C5 (no display):** for people without a T-Dongle. No screen, no
+  SD, no logo splash — but the lessons, difficulty tiers, Final Mission, Time Attack,
+  Blue Team and voice narration are all byte-for-byte identical, because they live in
+  the captive portal, not on the screen. The onboard single yellow USER LED
+  (`LED_BUILTIN`, active-LOW) is a plain "running" light (no colour states — it's one
+  LED, not an APA102). Needs no libraries.
 - **No true BadUSB:** the C5 can't do USB HID; the "it just comes up" experience is
-  the captive portal, which works identically on both boards.
+  the captive portal, which works identically on every board.
 
 ## Roadmap
 
